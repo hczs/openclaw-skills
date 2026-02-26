@@ -1,19 +1,48 @@
 # openclaw-skills
 
-这里沉淀我长期维护的 OpenClaw Skills（**一个 skill = 一个文件夹**）。目标很简单：把日常高频需求做成可复用、可组合、可自动化的技能库。
+[中文](./README.zh-CN.md)
 
-## Skills
+## 1) Repository
 
-### ai-daily
+A curated collection of practical **OpenClaw Skills** (one skill = one folder). The goal is to turn repetitive workflows into reusable, composable, automatable skills.
 
-从 **Andrej Karpathy 推荐的 90 个热门技术博客**中抓取最新文章，由 **OpenClaw 负责汇总、筛选与摘要**，生成一份可直接阅读/转存的中文日报（Markdown）。
+## 2) Quick Start (Install a skill from this repo)
 
-- 触发命令：`/ai-daily`
-- 输出：原始抓取数据（JSON/MD）+ 最终精选报告（Markdown，含原文链接）
+### Option A — Copy into your OpenClaw workspace (recommended)
 
-### iflow-apikey-refresh
+1. Clone this repo:
 
-iFlow（platform.iflow.cn）API Key 到期前自动刷新，并在成功/失败时通过 OpenClaw 主动通知（适合配合 cron 定时检查）。
+```bash
+git clone https://github.com/hczs/openclaw-skills.git
+cd openclaw-skills
+```
 
-- 适用：API Key 7 天过期，需要自动续期
-- 输出：成功则推送新 key + expireTime；失败则告警
+2. Copy the skill folder you want into your OpenClaw workspace:
+
+```bash
+# Example: install ai-daily
+cp -r ai-daily ~/.openclaw/workspace/skills/ai-daily
+
+# Example: install iflow-apikey-refresh
+cp -r iflow-apikey-refresh ~/.openclaw/workspace/skills/iflow-apikey-refresh
+```
+
+3. Restart (or reload) your OpenClaw agent if needed.
+
+### Option B — Use a symlink (for contributors)
+
+```bash
+# From your local clone
+ln -s "$(pwd)/ai-daily" ~/.openclaw/workspace/skills/ai-daily
+```
+
+> Notes
+> - A skill folder should only contain `SKILL.md` and files referenced by it.
+> - Do **not** commit secrets. Keep them in your local OpenClaw `secrets/` directory.
+
+## 3) Skills
+
+| Skill | What it does | Trigger / Usage |
+|---|---|---|
+| `ai-daily` | Fetches the latest posts from **90 tech blogs curated by Andrej Karpathy**, then OpenClaw summarizes and selects the best articles into a Markdown daily digest (with original links). | Trigger: `/ai-daily` |
+| `iflow-apikey-refresh` | Auto-refreshes iFlow (platform.iflow.cn) OpenAPI key near expiry, and proactively notifies you on success/failure (great for cron). | Run wrapper script via cron; requires `TARGET` env. |

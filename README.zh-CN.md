@@ -48,3 +48,4 @@ ln -s "$(pwd)/ai-daily" ~/.openclaw/workspace/skills/ai-daily
 | `iflow-apikey-refresh` | iFlow（platform.iflow.cn）API Key 到期前自动刷新，并在成功/失败时主动通知（适合配合 cron）。 | 用 cron 运行包装脚本；需要设置 `TARGET` 环境变量。 |
 | `pdf-read` | 本地抽取 PDF 文本（不依赖外部 API），按页输出到 `.txt`，便于检索/总结/引用条款。 | 运行抽取脚本（需要 Python venv + `pypdf`）。 |
 | `iflow-coding` | `iflow` CLI 编码工具的使用指南（如何在项目目录内安全运行、如何验收、如何找会话 JSONL 记录）。 | 需要用 `iflow` 写/改代码时用；具体命令见 SKILL.md。 |
+| `ppt-generator` | 将讲稿一键生成乔布斯风极简科技感 **16:9 横屏** HTML 演示稿（单文件，直接打开即可演示）。 | 需要生成PPT/Slides/演示稿时用；输出为 HTML 文件。 |

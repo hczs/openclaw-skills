@@ -48,3 +48,4 @@ ln -s "$(pwd)/ai-daily" ~/.openclaw/workspace/skills/ai-daily
 | `iflow-apikey-refresh` | Auto-refreshes iFlow (platform.iflow.cn) OpenAPI key near expiry, and proactively notifies you on success/failure (great for cron). | Run wrapper script via cron; requires `TARGET` env. |
 | `pdf-read` | Extracts text from PDFs locally (no external APIs) into a per-page `.txt` for analysis/summarization. | Run the extraction script (requires Python venv + `pypdf`). |
 | `iflow-coding` | A practical guide for using the `iflow` CLI as a coding agent (project-scoped runs, session logs, safe workflow). | Use when you want to operate `iflow` in a repo; see SKILL.md for command patterns. |
+| `ppt-generator` | Generates a Jobs-style minimal tech **16:9** HTML slide deck from a script (single self-contained HTML). | Ask for PPT/Slides/演示稿; output is an HTML file. |

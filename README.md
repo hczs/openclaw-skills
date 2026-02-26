@@ -46,3 +46,4 @@ ln -s "$(pwd)/ai-daily" ~/.openclaw/workspace/skills/ai-daily
 |---|---|---|
 | `ai-daily` | Fetches the latest posts from **90 tech blogs curated by Andrej Karpathy**, then OpenClaw summarizes and selects the best articles into a Markdown daily digest (with original links). | Trigger: `/ai-daily` |
 | `iflow-apikey-refresh` | Auto-refreshes iFlow (platform.iflow.cn) OpenAPI key near expiry, and proactively notifies you on success/failure (great for cron). | Run wrapper script via cron; requires `TARGET` env. |
+| `pdf-read` | Extracts text from PDFs locally (no external APIs) into a per-page `.txt` for analysis/summarization. | Run the extraction script (requires Python venv + `pypdf`). |

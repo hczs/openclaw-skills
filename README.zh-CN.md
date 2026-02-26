@@ -47,3 +47,4 @@ ln -s "$(pwd)/ai-daily" ~/.openclaw/workspace/skills/ai-daily
 | `ai-daily` | 从 **Karpathy 推荐的 90 个热门技术博客**抓取最新文章，由 OpenClaw 进行汇总、摘要与精选，输出带原文链接的 Markdown 日报。 | 触发：`/ai-daily` |
 | `iflow-apikey-refresh` | iFlow（platform.iflow.cn）API Key 到期前自动刷新，并在成功/失败时主动通知（适合配合 cron）。 | 用 cron 运行包装脚本；需要设置 `TARGET` 环境变量。 |
 | `pdf-read` | 本地抽取 PDF 文本（不依赖外部 API），按页输出到 `.txt`，便于检索/总结/引用条款。 | 运行抽取脚本（需要 Python venv + `pypdf`）。 |
+| `iflow-coding` | `iflow` CLI 编码工具的使用指南（如何在项目目录内安全运行、如何验收、如何找会话 JSONL 记录）。 | 需要用 `iflow` 写/改代码时用；具体命令见 SKILL.md。 |

@@ -49,3 +49,4 @@ ln -s "$(pwd)/ai-daily" ~/.openclaw/workspace/skills/ai-daily
 | `pdf-read` | Extracts text from PDFs locally (no external APIs) into a per-page `.txt` for analysis/summarization. | Run the extraction script (requires Python venv + `pypdf`). |
 | `iflow-coding` | A practical guide for using the `iflow` CLI as a coding agent (project-scoped runs, session logs, safe workflow). | Use when you want to operate `iflow` in a repo; see SKILL.md for command patterns. |
 | `ppt-generator` | Generates a Jobs-style minimal tech **16:9** HTML slide deck from a script (single self-contained HTML). | Ask for PPT/Slides/演示稿; output is an HTML file. |
+| `scrapling-scraper` | Web scraping/crawling skill powered by the **Scrapling** Python library (single-page extraction + anti-bot/JS rendering options). | Ask to scrape/extract data from pages; use the bundled CLI or follow SKILL.md. |

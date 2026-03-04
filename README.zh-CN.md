@@ -49,3 +49,4 @@ ln -s "$(pwd)/ai-daily" ~/.openclaw/workspace/skills/ai-daily
 | `pdf-read` | 本地抽取 PDF 文本（不依赖外部 API），按页输出到 `.txt`，便于检索/总结/引用条款。 | 运行抽取脚本（需要 Python venv + `pypdf`）。 |
 | `iflow-coding` | `iflow` CLI 编码工具的使用指南（如何在项目目录内安全运行、如何验收、如何找会话 JSONL 记录）。 | 需要用 `iflow` 写/改代码时用；具体命令见 SKILL.md。 |
 | `ppt-generator` | 将讲稿一键生成乔布斯风极简科技感 **16:9 横屏** HTML 演示稿（单文件，直接打开即可演示）。 | 需要生成PPT/Slides/演示稿时用；输出为 HTML 文件。 |
+| `scrapling-scraper` | 基于 **Scrapling** 的爬虫/抓取技能：支持单页抽取、反爬场景（更隐身的抓取）、以及需要 JS 渲染的页面。 | 你说“爬这个页面/抓数据/做爬虫”时触发；可用内置 CLI 快速验证选择器，详见 SKILL.md。 |
